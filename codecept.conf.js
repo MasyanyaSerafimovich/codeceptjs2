@@ -24,7 +24,11 @@ exports.config = {
     I: './steps_file.js',
     signInPage: "./pages/SignIn.js",
     labels: "./pages/Label.js",
-    config: "./config/cred.js",
+    generalSettings: "./pages/GeneralSettings.js",
+    accountDelete: "./pages/AccountDelete.js",
+    notifications: "./pageElements/Notifications.js",
+    inputError: "./pageElements/InputErrors.js",
+    config: "./config/cred.js"
   },
   name: 'codeceptjs-tests'
 }

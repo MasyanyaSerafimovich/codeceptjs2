@@ -13,16 +13,11 @@ module.exports = {
         newLabel: '#labelTitle'
     },
 
-    locators: {
-        notificationTitle: '//div[@class="notification-title"]',
-        notificationContent: '//div[@class="notification-content"]'
-    },
-
     visit () {
         I.amOnPage('/labels');
     },
 
     findLabelCrossLocator (labelTitle) {
-        return `//button[text()='${labelTitle}']/${this.buttons.cross}`;
+        return `//button[text()="${labelTitle}"]/${this.buttons.cross}`;
     }
 }

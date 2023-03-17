@@ -17,10 +17,10 @@ Scenario('Добавление новой метки',  ({ I, labels }) => {
     I.see(labelTitle, labels.buttons.label);
 });
 
-Scenario('Удаление метки',  ({ I, labels }) => {
+Scenario('Удаление метки',  ({ I, labels, notifications }) => {
     labels.visit();
     I.see(labelTitle, labels.buttons.label);
     I.click(labels.findLabelCrossLocator(labelTitle));
     I.click(labels.buttons.deleteConfirm);
-    I.see("Метка удалена", labels.locators.notificationContent);
+    I.see("Метка удалена", notifications.locators.notificationContent);
 });
