@@ -5,8 +5,7 @@ module.exports = {
         newLabel: '[href="/labels/new"]',
         createLabel: '//button[text()="Создать"]',
         label: '//div[contains(@class, "labels-list")]/span/button',
-        cross: 'following::button[contains(@class, "delete")]',
-        deleteConfirm: '//button[text()="Сделать это!"]'
+        cross: 'following::button[contains(@class, "delete")]'
     },
 
     inputs: {
