@@ -1,4 +1,4 @@
-Feature('Команды');
+Feature('Сохранённые поиски');
 
 const savedSearchName = 'GinTonic_saved_search';
 
