@@ -19,6 +19,9 @@ module.exports = {
 
     visit () {
         I.amOnPage('/teams');
+    },
+
+    getTeamNameLocator (name) {
+        return this.locators.teamList + `[text()="${name}"]`
     }
 }
-

@@ -24,6 +24,7 @@ exports.config = {
     I: './steps_file.js',
     signInPage: "./pages/SignIn.js",
     teamPage: "./pages/Team.js",
+    nameSpace: "./pages/NameSpace.js",
     labels: "./pages/Label.js",
     generalSettings: "./pages/GeneralSettings.js",
     accountDelete: "./pages/AccountDelete.js",
