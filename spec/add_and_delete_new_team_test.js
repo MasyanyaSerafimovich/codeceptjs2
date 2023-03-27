@@ -26,7 +26,7 @@ Scenario('Добавление новой команды',  ({ I, teamPage, noti
 Scenario('Удаление команды',  ({ I, teamPage, notifications, actionConfirm }) => {
     teamPage.visit();
     I.see(teamName, teamPage.locators.teamList);
-    I.click(teamPage.getTeamNameLocator(teamName));
+    I.click(teamPage.locators.getTeamNameLocator(teamName));
     I.click(teamPage.buttons.deleteTeam);
     I.click(actionConfirm.buttons.doIt);
     I.see("Успех", notifications.locators.notificationTitle);
