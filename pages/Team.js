@@ -14,14 +14,13 @@ module.exports = {
     },
 
     locators: {
-        teamList: '//ul[@class="teams box"]/li/a'
+        teamList: '//ul[@class="teams box"]/li/a',
+        getTeamNameLocator (name) {
+            return this.teamList + `[text()="${name}"]`
+        }
     },
 
     visit () {
         I.amOnPage('/teams');
-    },
-
-    getTeamNameLocator (name) {
-        return this.locators.teamList + `[text()="${name}"]`
     }
 }
