@@ -9,7 +9,7 @@ Before(({ signInPage, config }) => {
     );
 });
 
-Scenario.only('Создание сохранённого поиска',  ({ I, nameSpace, config }) => {
+Scenario('Создание сохранённого поиска',  ({ I, nameSpace, config }) => {
     nameSpace.visit();
     I.click(nameSpace.buttons.addSavedSearch);
     I.click(nameSpace.fields.savedSearchName);
