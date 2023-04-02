@@ -15,7 +15,7 @@ module.exports = {
     },
 
     checkbox: {
-        teamList: '//label[@class="check"]/following::span',
+        teamList: '//label[@class="base-checkbox__label"]/following::span',
 
         getCheckboxLocator (title) {
             return this.teamList + `[text()="${title}"]`
