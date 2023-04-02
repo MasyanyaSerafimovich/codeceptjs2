@@ -16,6 +16,7 @@
         "@codeceptjs/examples": "^1.2.1",
         "@codeceptjs/ui": "^0.5.0",
         "@playwright/test": "^1.32.1",
+        "@testomatio/reporter": "^0.7.6",
         "codeceptjs": "^3.4.1",
         "playwright": "^1.31.2"
     }
