@@ -17,7 +17,8 @@ exports.config = {
     Playwright: {
       url: 'https://try.vikunja.io',
       show: true,
-      browser: 'chromium'
+      browser: 'chromium',
+      locale: 'ru-RU'
     }
   },
   include: {
