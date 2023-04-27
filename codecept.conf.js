@@ -3,7 +3,7 @@ const {
   setCommonPlugins
 } = require('@codeceptjs/configure');
 
-setHeadlessWhen(process.env.HEADLESS);
+
 
 setCommonPlugins();
 
