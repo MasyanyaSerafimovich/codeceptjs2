@@ -1,25 +1,25 @@
 const { I } = inject();
 
 module.exports = {
+    title: {
+        status: '.container h1'
+    },
+
     fields: {
         username: 'input[name=email]',
         password: 'input[name=password]'
-    },
-
-    checkbox: {
-        formManipulation: '[name=loveForm]',
     },
 
     select: {
         makeSelection: '[name="selectLogin"]'
     },
 
-    button: {
-        logIn: '[type=submit]'
+    checkbox: {
+        formManipulation: '[name=loveForm]',
     },
 
-    title: {
-        status: '.container h1'
+    button: {
+        logIn: '[type=submit]'
     },
 
     visit () {
@@ -34,12 +34,20 @@ module.exports = {
         I.fillField(this.fields.password, password);
     },
 
-    Authentication (username, password) {
-        this.visit();
-        this.fillLogin(username);
-        this.fillPassword(password);
+    chooseSelection (option) {
+        if (option == 'login') {
+            I.selectOption(this.select.makeSelection, 'yes');
+        } else if (option == 'do not login') {
+            I.selectOption(this.select.makeSelection, 'no');
+        }
+    },
+
+    clickCheckbox () {
+        I.click(this.checkbox.formManipulation);
+    },
+
+    clickLoginButton () {
         I.click(this.button.logIn);
-        I.seeElement(this.locators.userName);
     }
 }
 
