@@ -2,19 +2,27 @@ const { I } = inject();
 
 module.exports = {
     fields: {
-        username: '#username',
-        password: '#password'
+        username: 'input[name=email]',
+        password: 'input[name=password]'
     },
 
-    locators: {
-        userName: '//span[@class="username"]'
+    checkbox: {
+        formManipulation: '[name=loveForm]',
+    },
+
+    select: {
+        makeSelection: '[name="selectLogin"]'
+    },
+
+    button: {
+        logIn: '[type=submit]'
     },
 
     visit () {
-        I.amOnPage('/login');
+        I.amOnPage('/complexAuth');
     },
 
-    fillUsername (username) {
+    fillLogin (username) {
         I.fillField(this.fields.username, username);
     },
 
