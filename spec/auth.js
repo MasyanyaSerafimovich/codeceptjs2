@@ -1,13 +1,20 @@
-Feature('Авторизация');
+Feature('Authentication page');
 
-Before(({ signInPage, config }) => {
-    signInPage.authorizeMe(
-        config.credentials.username,
-        config.credentials.password
-    );
+Scenario('should exists',  ({ I, loginPage}) => {
+    loginPage.visit();
+    I.see("Complex Form Authentication", loginPage.title.status);
 });
 
-Scenario('Успешная авторизация',  ({ I, signInPage, config}) => {
+/*
+Scenario('Успешная авторизация',  ({ I, loginPage, successPage, config}) => {
+    signInPage.visit();
+    signInPage.fillUsername(config.credentials.username);
+    signInPage.fillPassword(config.credentials.password);
+    I.click('Войти','.button');
+    I.seeInCurrentUrl('/');
+});
+
+Scenario('Успешная авторизация',  ({ I, loginPage, successPage, config}) => {
     signInPage.visit();
     signInPage.fillUsername(config.credentials.username);
     signInPage.fillPassword(config.credentials.password);
@@ -38,3 +45,4 @@ Scenario('Удаление команды',  ({ I, teamPage, notifications, acti
     I.see("Успех", notifications.locators.notificationTitle);
     I.see("Команда удалена.", notifications.locators.notificationContent);
 });
+*/

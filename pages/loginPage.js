@@ -18,6 +18,10 @@ module.exports = {
         logIn: '[type=submit]'
     },
 
+    title: {
+        status: '.container h1'
+    },
+
     visit () {
         I.amOnPage('/complexAuth');
     },
@@ -30,11 +34,11 @@ module.exports = {
         I.fillField(this.fields.password, password);
     },
 
-    authorizeMe (username, password) {
+    Authentication (username, password) {
         this.visit();
-        this.fillUsername(username);
+        this.fillLogin(username);
         this.fillPassword(password);
-        I.click('Войти','.button');
+        I.click(this.button.logIn);
         I.seeElement(this.locators.userName);
     }
 }
