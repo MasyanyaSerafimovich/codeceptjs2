@@ -28,16 +28,8 @@ exports.config = {
   },
   include: {
     I: './steps_file.js',
-    signInPage: "./pages/SignIn.js",
-    teamPage: "./pages/Team.js",
-    nameSpace: "./pages/NameSpace.js",
-    labels: "./pages/Label.js",
-    generalSettings: "./pages/GeneralSettings.js",
-    accountDelete: "./pages/AccountDelete.js",
-    notifications: "./pageElements/Notifications.js",
-    inputError: "./pageElements/InputErrors.js",
-    actionConfirm: "./pageElements/ActionConfirm.js",
-    config: "./config/cred.js"
+    loginPage: "./pages/loginPage.js",
+    successPage: "./pages/successPage.js",
   },
   name: 'codeceptjs-tests'
 }
