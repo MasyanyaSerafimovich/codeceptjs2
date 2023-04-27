@@ -1,5 +1,6 @@
 const { I } = inject();
 
+
 module.exports = {
     credentials: {
         login: 'complex@authenticationtest.com',
